@@ -1,0 +1,2 @@
+class ProficiencyListsController < ApplicationController
+end
