@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_08_220502) do
+ActiveRecord::Schema.define(version: 2021_04_09_152918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "backgrounds", force: :cascade do |t|
+    t.string "skills", default: [], array: true
+    t.text "desc"
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "characters", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -47,6 +55,9 @@ ActiveRecord::Schema.define(version: 2021_04_08_220502) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "character_class"
     t.string "traits", default: [], array: true
+    t.string "cantrips", default: [], array: true
+    t.string "skills", default: [], array: true
+    t.string "spellcasting_ability"
     t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
