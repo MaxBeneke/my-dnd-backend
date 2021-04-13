@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   patch '/users/:id', to: "users#update"
 
   get '/backgrounds/index', to: "backgrounds#index"
+
+  post '/characters', to: "characters#create"
   
 end
