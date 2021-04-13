@@ -8,6 +8,12 @@ class CharactersController < ApplicationController
         end
     end
 
+    def destroy
+        @character = Character.find(params[:id])
+        @character.destroy
+        render json: @character.user
+    end
+
     private
 
     def character_params

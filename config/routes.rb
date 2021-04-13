@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get '/backgrounds/index', to: "backgrounds#index"
 
   post '/characters', to: "characters#create"
-  
+  delete '/character/:id', to: "characters#destroy"
 end
