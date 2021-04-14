@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_170421) do
+ActiveRecord::Schema.define(version: 2021_04_14_142735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_04_13_170421) do
     t.string "spellcasting_ability"
     t.string "alignment"
     t.string "proficiencies", default: [], array: true
+    t.integer "hit_die"
     t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
