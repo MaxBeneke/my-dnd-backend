@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/users/login', to: "users#login"
   post '/users/signup', to: "users#signup"
   patch '/users/:id', to: "users#update"
+  get '/me', to: "users#me"
 
   get '/backgrounds/index', to: "backgrounds#index"
 
