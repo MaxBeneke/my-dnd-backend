@@ -11,12 +11,9 @@ This project is created with:
 * GraphQL (https://github.com/prisma-labs/graphql-request)
 
 # Setup
-To run this project locally using npm
+To run this project locally using the standard Rails gems:
 ```
-$ npm install
-$ npm install react-router-dom
-$ npm install semantic-ui-react
-$ npm add graphql-request graphql
+$ bundle install
 ```
 # Next Steps
 This project is still in development, with one major update in the works: 
